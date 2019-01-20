@@ -4,4 +4,30 @@ version = "0.1.0"
 authors = ["Matt DeBoard <matt.deboard@gmail.com>"]
 edition = "2018"
 
+# [lib]
+# name = "lfgbot"
+# path = "src/lfgbot/lib.rs"
+
+# [[bin]]
+# name = "lfgbot"
+# path = "src/main.rs"
+# test = false
+
 [dependencies]
+bigdecimal = "*"
+diesel = { version = "1.3.3", features = ["chrono", "postgres", "serde_json", "64-column-tables", "numeric", "uuid"] }
+# diesel_cli must be installed via the following command:
+# cargo install diesel_cli --no-default-features --features postgres
+diesel_migrations = "1.3.0"
+env_logger = "~0.4"
+kankyo = "~0.1"
+log = "~0.3"
+num = "*"
+r2d2 = "*"
+r2d2-diesel = "*"
+rand = "*"
+serde = "^1.0"
+serde_derive = "^1.0"
+serde_json = "^1.0"
+serenity = "0.5"
+typemap = "0.3"
