@@ -4,14 +4,14 @@ version = "0.1.0"
 authors = ["Matt DeBoard <matt.deboard@gmail.com>"]
 edition = "2018"
 
-# [lib]
-# name = "lfgbot"
-# path = "src/lfgbot/lib.rs"
+[lib]
+name = "lfgbot"
+path = "src/lfgbot/lib.rs"
 
-# [[bin]]
-# name = "lfgbot"
-# path = "src/main.rs"
-# test = false
+[[bin]]
+name = "lfgbot"
+path = "src/main.rs"
+test = false
 
 [dependencies]
 bigdecimal = "*"
