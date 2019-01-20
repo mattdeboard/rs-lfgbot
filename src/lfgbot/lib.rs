@@ -10,6 +10,7 @@ extern crate serenity;
 
 pub mod db;
 pub mod models;
+pub mod commands;
 
 use env_logger;
 use serenity::framework::standard::help_commands;
@@ -49,7 +50,19 @@ pub fn client_setup() {
   client.with_framework(
     StandardFramework::new()
       .configure(|c| c.owners(bot_owners()).prefix("~"))
-      .help(help_commands::with_embeds),
+      .help(help_commands::with_embeds)
+      .group("Players LFG", |g| {
+        g.command("showteams", |c| {
+          c.desc("Show a list of teams looking for players matching your specified roles")
+            .cmd(commands::showme::showme)
+        })
+      })
+      .group("Teams LFT", |g| {
+        g.command("showplayers", |c| {
+          c.desc("Show a list of players LFT matching your specified needs")
+            .cmd(commands::showme::showme)
+        })
+      }),
   )
 }
 
