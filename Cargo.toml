@@ -1,0 +1,7 @@
+[package]
+name = "rs-lfgbot"
+version = "0.1.0"
+authors = ["Matt DeBoard <matt.deboard@gmail.com>"]
+edition = "2018"
+
+[dependencies]
